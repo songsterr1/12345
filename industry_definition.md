@@ -1,9 +1,7 @@
-# Industry Definition: Universal Printing Supplies Industry (通用打印耗材行业)
+# 行业定义：通用打印耗材行业
 
-The Universal Printing Supplies Industry (通用打印耗材行业) refers to the commercial sector involved in the design, manufacturing, and distribution of non-original equipment manufacturer (non-OEM) consumables that are compatible with a wide variety of printing devices, including laser printers, inkjet printers, and dot-matrix printers. Core products encompass three primary categories: toner cartridges, powder-based imaging materials used in laser printers and photocopiers fitted to specific drum units or toner hoppers; ink cartridges, liquid dye or pigment-based solutions for inkjet printers that can be individually refilled to replenish print volume; and printer ribbons, specialized consumables designed exclusively for dot-matrix printers.
+通用打印耗材行业是指从事非原装（非OEM）打印耗材研发、生产及销售的商业领域。核心产品涵盖三类：①碳粉盒，激光打印机及复印机用成像粉末，需适配特定硒鼓或粉仓；②墨盒，喷墨打印机用液态染料或颜料；③色带，针式打印机专用耗材。通用打印耗材售价通常仅为原装产品的10%至40%，为消费者、企业及政府客户提供显著成本优势。
 
-As a cost-effective alternative to original branded supplies, universal printing consumables are typically priced at 10%–40% of OEM equivalents, offering significant savings to end-users across consumer, business, and government segments. The industry's global supply chain is predominantly anchored in China, which accounts for approximately 60% of worldwide production capacity, with Zhuhai serving as the core manufacturing hub, contributing around 70% of China's output and roughly 42% of global capacity. Major consuming regions include North America, Europe, China, and India, collectively representing the bulk of global demand.
+中国是全球最主要的生产国，产能约占全球总量的60%，珠海产业集群约占全球产能42%；北美、欧洲、中国及印度为主要消费市场。2024年全球市场规模约176亿美元，集中度较低，前五大品牌合计市占率仅约8.45%，市场高度分散。这一格局源于产业链复杂、品牌建设门槛高，以及多数参与者以代工为主，自主品牌意愿不足，竞争呈碎片化特征。
 
-Valued at approximately USD 17.6 billion in 2024, the global market is characterized by low concentration—the top five brands hold a combined market share of only approximately 8.45%—reflecting an intensely fragmented competitive environment. This fragmentation is driven by the industry's complex, multi-tiered supply chain, substantial barriers to brand establishment, and the predominance of OEM contract manufacturing, where most market participants opt for production services over brand building as the primary commercial model.
-
-*Source: Frost & Sullivan*
+来源：弗若斯特沙利文
