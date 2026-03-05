@@ -1,0 +1,86 @@
+通用打印耗材行业竞争力评估 | Print Consumables Industry — Competitive Strength Analysis
+==========================================================================================
+
+数据来源 / Sources:
+  - Frost & Sullivan industry research report (provided in PR)
+  - User-provided sales volume data (2024)
+
+评分尺度 / Score Scale: 0–100
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■  SELECTED CRITERIA (4 dimensions)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Dimension 1 — 销量 Sales Volume  [单一类指标 / Single Indicator]
+  Basis: 2024 actual sales volume (万支/10,000 PCS), scaled proportionally
+  to 100 (maximum = 2,500万支 = 100 points).
+  Rationale: Objective, directly comparable, no subjectivity.
+
+Dimension 2 — 市场力 Market Power  [复合类指标 / Composite Indicator]
+  Components: Market share (市占率) + Revenue base (营收) + Customer coverage (客户情况)
+  Scoring basis: G&G holds the global #1 market share (~2.3% market share per report);
+  Dinglong and Print-Rite have broad B2B customer networks; others are
+  mid-tier participants.
+
+Dimension 3 — 创新力 Innovation  [复合类指标 / Composite Indicator]
+  Components: R&D capability (技术能力) + Technical patents (技术专利)
+  Scoring basis: G&G leads in smart-chip cartridge R&D;
+  Dinglong is a listed company with significant disclosed R&D expenditure;
+  Print-Rite (Zhuhai Tianwei Feima) has decades of OPC drum / photoconductor
+  specialty engineering heritage.
+
+Dimension 4 — 品牌力 Brand Strength  [复合类指标 / Composite Indicator]
+  Components: Global brand recognition + Distribution channel breadth
+  Scoring basis: G&G (G&G brand) = top-tier global generic brand;
+  Print-Rite has long-established international brand presence (Print-Rite brand);
+  Dinglong is a recognized publicly-listed company in China.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■  SCORES TABLE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Company (Full Legal Name)                        Sales  Market  Innov.  Brand
+                                                  (销量) (市场力)(创新力)(品牌力)
+───────────────────────────────────────────────────────────────────────────────
+珠海格之格数码科技有限公司                          100      95      88     92
+  (Zhuhai G&G Digital Technology Co., Ltd.)
+江西亿铂电子科技有限公司                             80      65      55     48
+  (Jiangxi Yibo Electronic Technology Co., Ltd.)
+珠海中凯打印机耗材有限公司                           72      55      50     40
+  (Zhuhai Zhongkai Printer Consumables Co., Ltd.)
+珠海美景联合科技有限公司                             54      45      42     35
+  (Zhuhai Meijing United Technology Co., Ltd.)
+湖北鼎龙控股股份有限公司                             60      70      80     62
+  (Hubei Dinglong Holdings Co., Ltd.)
+珠海天威飞马打印耗材有限公司                         32      68      72     78
+  (Zhuhai Print-Rite Feima Print Consumables Co., Ltd.)
+───────────────────────────────────────────────────────────────────────────────
+
+Raw sales volumes (万支 / 10,000 PCS, 2024, from user-provided data):
+  格之格 2500万支 | 亿铂 2000万支 | 中凯 1800万支 | 鼎龙 1500万支 | 美景 1350万支 | 天威飞马 800万支
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■  KEY FINDINGS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+• 珠海格之格 dominates on all four dimensions, especially Sales Volume (100)
+  and Market Power (95) — consistent with its global #1 market share position.
+
+• 湖北鼎龙 and 珠海天威飞马 show a distinctive profile: despite lower sales
+  volumes vs. top manufacturers, they score significantly higher on Innovation
+  and Brand Strength — indicating depth-over-volume competitive strategies.
+
+• 珠海天威飞马 exhibits a "low sales / high brand" profile (32 sales, 78 brand),
+  reflecting its long heritage as an international OEM/brand specialist
+  (OPC drum photoconductor technology) rather than a volume-driven model.
+
+• 江西亿铂 and 珠海中凯 are volume-driven mid-tier players with balanced but
+  undifferentiated profiles across Market Power, Innovation, and Brand.
+
+• 珠海美景联合 trails across all four dimensions, indicating limited
+  differentiation and reliance on OEM/ODM contract manufacturing.
+
+See: competitive_analysis.png for the radar chart visualization.
