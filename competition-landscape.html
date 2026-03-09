@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>打印耗材行业竞争格局概览</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+      background: #f5f7fa;
+      color: #2c3e50;
+      padding: 32px 24px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #1a2540;
+    }
+    .subtitle {
+      text-align: center;
+      font-size: 13px;
+      color: #7f8c9a;
+      margin-bottom: 28px;
+    }
+    .chart-container {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+      padding: 24px 28px 20px;
+      max-width: 900px;
+      margin: 0 auto 28px;
+    }
+    .legend-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      max-width: 900px;
+      margin: 0 auto 28px;
+    }
+    .legend-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      padding: 16px 18px;
+    }
+    .legend-card h3 {
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #34495e;
+    }
+    .legend-card p {
+      font-size: 12px;
+      color: #6b7a8d;
+      line-height: 1.6;
+    }
+    .axis-tag {
+      display: inline-block;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-right: 4px;
+      color: #fff;
+    }
+    .tag-x  { background: #3b82f6; }
+    .tag-y  { background: #10b981; }
+    .tag-a  { background: #f59e0b; }
+    .tag-b  { background: #8b5cf6; }
+    table {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+    th, td {
+      padding: 10px 14px;
+      font-size: 13px;
+      text-align: center;
+      border-bottom: 1px solid #f0f2f5;
+    }
+    th {
+      background: #f8fafc;
+      font-weight: 600;
+      color: #4a5568;
+    }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: #f7fbff; }
+    td:first-child { text-align: left; font-weight: 500; }
+    .score-high   { color: #059669; font-weight: 700; }
+    .score-mid    { color: #d97706; font-weight: 600; }
+    .score-low    { color: #dc2626; font-weight: 600; }
+    .note {
+      max-width: 900px;
+      margin: 16px auto 0;
+      font-size: 12px;
+      color: #9aa5b4;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<h1>通用打印耗材行业竞争格局概览（2024年）</h1>
+<p class="subtitle">气泡大小 = 创新力（α轴）｜ 气泡色深 = 品牌力（β轴）</p>
+
+<div class="chart-container">
+  <canvas id="bubbleChart" height="380"></canvas>
+</div>
+
+<!-- Axis legend cards -->
+<div class="legend-grid">
+  <div class="legend-card">
+    <h3><span class="axis-tag tag-x">X轴</span>销量（万支）</h3>
+    <p>以2024年实际出货量为基准，最高销量2,500万支折算满分100分，其余按比例线性换算。</p>
+  </div>
+  <div class="legend-card">
+    <h3><span class="axis-tag tag-y">Y轴</span>市场力（0–100分）</h3>
+    <p>综合市场占有率（%）、营业收入（RMB）与客户覆盖情况三要素评估企业商业控制力。</p>
+  </div>
+  <div class="legend-card">
+    <h3><span class="axis-tag tag-a">α轴</span>创新力（气泡大小，0–100分）</h3>
+    <p>综合研发能力（技术投入/RMB）与技术专利数量，衡量企业长期竞争可持续性。</p>
+  </div>
+  <div class="legend-card">
+    <h3><span class="axis-tag tag-b">β轴</span>品牌力（气泡色深，0–100分）</h3>
+    <p>综合全球品牌认知度与销售渠道广度，反映企业差异化竞争护城河与溢价空间。</p>
+  </div>
+</div>
+
+<!-- Data table -->
+<table>
+  <thead>
+    <tr>
+      <th>企业名称</th>
+      <th><span class="axis-tag tag-x">X</span>销量</th>
+      <th><span class="axis-tag tag-y">Y</span>市场力</th>
+      <th><span class="axis-tag tag-a">α</span>创新力</th>
+      <th><span class="axis-tag tag-b">β</span>品牌力</th>
+      <th>综合得分</th>
+    </tr>
+  </thead>
+  <tbody id="tableBody"></tbody>
+</table>
+<p class="note">* 综合得分 = (销量 + 市场力 + 创新力 + 品牌力) / 4｜鼎龙排名第二，市场研报综合评估</p>
+
+<script>
+  const companies = [
+    {
+      name: "珠海格之格",
+      shortName: "格之格",
+      x: 100, y: 95, alpha: 88, beta: 92,
+      color: "#2563eb"
+    },
+    {
+      name: "江西亿铂",
+      shortName: "亿铂",
+      x: 80, y: 65, alpha: 55, beta: 48,
+      color: "#16a34a"
+    },
+    {
+      name: "珠海中凯",
+      shortName: "中凯",
+      x: 72, y: 55, alpha: 50, beta: 40,
+      color: "#ca8a04"
+    },
+    {
+      name: "珠海美景",
+      shortName: "美景",
+      x: 54, y: 45, alpha: 42, beta: 35,
+      color: "#dc2626"
+    },
+    {
+      name: "湖北鼎龙",
+      shortName: "鼎龙",
+      x: 60, y: 70, alpha: 80, beta: 62,
+      color: "#7c3aed"
+    }
+  ];
+
+  // Bubble size: map alpha (0–100) to Chart.js r (pixel radius).
+  // r = alpha * 0.28 + 6 gives range [~6px at alpha=0, ~34px at alpha=100].
+  const toR = (alpha) => Math.round(alpha * 0.28 + 6);
+
+  // Build datasets (one per company for per-bubble color + legend)
+  const datasets = companies.map(c => ({
+    label: c.shortName,
+    data: [{ x: c.x, y: c.y, r: toR(c.alpha) }],
+    backgroundColor: hexToRgba(c.color, 0.18 + c.beta / 100 * 0.55),
+    borderColor: c.color,
+    borderWidth: 2
+  }));
+
+  function hexToRgba(hex, alpha) {
+    const r = parseInt(hex.slice(1,3), 16);
+    const g = parseInt(hex.slice(3,5), 16);
+    const b = parseInt(hex.slice(5,7), 16);
+    return `rgba(${r},${g},${b},${alpha.toFixed(2)})`;
+  }
+
+  const ctx = document.getElementById("bubbleChart").getContext("2d");
+  new Chart(ctx, {
+    type: "bubble",
+    data: { datasets },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: "right",
+          labels: { font: { size: 13 }, padding: 16, usePointStyle: true, pointStyleWidth: 12 }
+        },
+        tooltip: {
+          callbacks: {
+            label(ctx) {
+              const c = companies[ctx.datasetIndex];
+              return [
+                `${c.name}`,
+                `销量: ${c.x}分`,
+                `市场力: ${c.y}分`,
+                `创新力: ${c.alpha}分`,
+                `品牌力: ${c.beta}分`,
+                `综合: ${((c.x+c.y+c.alpha+c.beta)/4).toFixed(1)}分`
+              ];
+            }
+          }
+        }
+      },
+      scales: {
+        x: {
+          min: 0, max: 110,
+          title: {
+            display: true,
+            text: "销量（0–100分，100分 = 2,500万支）",
+            font: { size: 13, weight: "600" },
+            color: "#3b82f6"
+          },
+          grid: { color: "#e8edf3" },
+          ticks: { font: { size: 12 } }
+        },
+        y: {
+          min: 0, max: 110,
+          title: {
+            display: true,
+            text: "市场力（0–100分）",
+            font: { size: 13, weight: "600" },
+            color: "#10b981"
+          },
+          grid: { color: "#e8edf3" },
+          ticks: { font: { size: 12 } }
+        }
+      }
+    }
+  });
+
+  // Populate table
+  const tbody = document.getElementById("tableBody");
+  const sorted = [...companies].sort((a,b) => {
+    const sa = (a.x+a.y+a.alpha+a.beta)/4;
+    const sb = (b.x+b.y+b.alpha+b.beta)/4;
+    return sb - sa;
+  });
+
+  function scoreClass(v) {
+    if (v >= 75) return "score-high";
+    if (v >= 55) return "score-mid";
+    return "score-low";
+  }
+
+  sorted.forEach((c, i) => {
+    const overall = ((c.x+c.y+c.alpha+c.beta)/4).toFixed(1);
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td><span style="color:${c.color};font-size:10px;margin-right:4px">●</span>${c.name}</td>
+      <td class="${scoreClass(c.x)}">${c.x}</td>
+      <td class="${scoreClass(c.y)}">${c.y}</td>
+      <td class="${scoreClass(c.alpha)}">${c.alpha}</td>
+      <td class="${scoreClass(c.beta)}">${c.beta}</td>
+      <td class="${scoreClass(parseFloat(overall))}">${overall}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+</script>
+</body>
+</html>
